@@ -27,7 +27,7 @@ public class EmployeeService extends Service<EmployeeConfiguration> {
         DB db = mongo.getDB(configuration.mongodb);
         JacksonDBCollection<Employee, String> employees = JacksonDBCollection.wrap(db.getCollection("employees"), Employee.class, String.class);
 
-
+        environment.addResource(new IndexResource(employees));
 
         environment.addResource(new EmployeeResource(employees));
     }
