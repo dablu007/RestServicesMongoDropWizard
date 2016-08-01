@@ -1,7 +1,9 @@
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.NotBlank;
 
 import java.util.UUID;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Employee {
 
     private String id = UUID.randomUUID().toString();

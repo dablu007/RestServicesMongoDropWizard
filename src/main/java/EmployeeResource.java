@@ -22,7 +22,7 @@ public class EmployeeResource {
 
     @POST
     @Timed
-    public Response publishNewBlog(@Valid Employee employee) {
+    public Response publishNewEmployee(@Valid Employee employee) {
         collection.insert(employee);
         return Response.noContent().build();
     }
