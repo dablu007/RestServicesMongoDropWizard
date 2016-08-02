@@ -8,8 +8,6 @@ Requirements The requirements of this application are:
 
 [3] JUnit 4.11
 
-[4] Drop Wizard
-
 [5] Mongo
 
 
