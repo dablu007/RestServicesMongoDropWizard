@@ -26,6 +26,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>net.vz.mongodb.jackson</groupId>
             <artifactId>mongo-jackson-mapper</artifactId>
             <version>1.4.2</version>
@@ -51,6 +57,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>3.0.7.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>1.6.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -97,60 +109,60 @@
                     </archive>
                 </configuration>
             </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-antrun-plugin</artifactId>
-                    <version>1.1</version>
-                    <executions>
-                        <execution>
-                            <id>id.validate</id>
-                            <phase>validate</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <tasks>
-                                    <echo>validate phase</echo>
-                                </tasks>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>id.compile</id>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <tasks>
-                                    <echo>compile phase</echo>
-                                </tasks>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>id.test</id>
-                            <phase>test</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <tasks>
-                                    <echo>test phase</echo>
-                                </tasks>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>id.package</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <tasks>
-                                    <echo>package phase</echo>
-                                </tasks>
-                            </configuration>
-                        </execution>
-                    </executions>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <id>id.validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>validate phase</echo>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>id.compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>compile phase</echo>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>id.test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>test phase</echo>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>id.package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>package phase</echo>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
