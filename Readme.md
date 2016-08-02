@@ -10,6 +10,8 @@ Requirements The requirements of this application are:
 
 [4] Drop Wizard
 
+[5] Mongo
+
 
 Running the Application
 
@@ -24,12 +26,12 @@ Application
 
 -> mvn exec:java -Dexec.mainClass="EmployeeService" (for running the app)
 
-1. For pushing data into the mongo DB
+(i) For pushing data into the mongo DB
 
 curl -i -X POST -H "Content-Type: application/json" -d '{"title":"something","name": "some name"}' http://localhost:8080/employees
 
 
-2. Fetching it on the api
+(ii) Fetching it on the api
 
 curl http://localhost:8080
 
